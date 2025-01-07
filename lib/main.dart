@@ -1,4 +1,5 @@
 import 'package:coaching_class_app/pages/boarding_page.dart';
+import 'package:coaching_class_app/pages/notification_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -27,7 +28,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     screenWidth = MediaQuery.of(context).size.width;
     screenHeight = MediaQuery.of(context).size.height;
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Boardingpage(),
     );

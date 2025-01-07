@@ -1,5 +1,6 @@
 import 'package:coaching_class_app/pages/drawer_page.dart';
 import 'package:coaching_class_app/pages/landing_page.dart';
+import 'package:coaching_class_app/pages/notification_page.dart';
 import 'package:coaching_class_app/pages/profile_page.dart';
 import 'package:coaching_class_app/pages/vhn_page.dart';
 
@@ -23,6 +24,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     return [
       LandingPage(),
       MyApp(),
+      NotificationPage(),
       ProfilePage(),
     ];
   }
@@ -41,6 +43,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             "/first": (final context) => const LandingPage(),
             "/second": (final context) => MyApp(),
             "/third": (final context) => const ProfilePage(),
+            "/Fourth": (final context) => NotificationPage(),
           },
         ),
       ),
@@ -55,6 +58,22 @@ class _BottomNavBarState extends State<BottomNavBar> {
             "/first": (final context) => const LandingPage(),
             "/second": (final context) => MyApp(),
             "/third": (final context) => const ProfilePage(),
+            "/Fourth": (final context) => NotificationPage(),
+          },
+        ),
+      ),
+      PersistentBottomNavBarItem(
+        icon: Icon(Icons.notification_add),
+        activeColorPrimary: Colors.blue,
+        inactiveColorPrimary: Colors.grey,
+        scrollController: _scrollController2,
+        routeAndNavigatorSettings: RouteAndNavigatorSettings(
+          initialRoute: "/",
+          routes: {
+            "/first": (final context) => const LandingPage(),
+            "/second": (final context) => MyApp(),
+            "/third": (final context) => const ProfilePage(),
+            "/Fourth": (final context) => NotificationPage(),
           },
         ),
       ),
@@ -69,6 +88,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             "/first": (final context) => const LandingPage(),
             "/second": (final context) => MyApp(),
             "/third": (final context) => const ProfilePage(),
+            "/Fourth": (final context) => NotificationPage(),
           },
         ),
       ),
