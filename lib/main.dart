@@ -2,6 +2,7 @@ import 'package:coaching_class_app/pages/boarding_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  print("Hello World");
   runApp(const MainApp());
 }
 
