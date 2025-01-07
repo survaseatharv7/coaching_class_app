@@ -1,5 +1,5 @@
 import "package:coaching_class_app/main.dart";
-import "package:coaching_class_app/pages/login_page.dart";
+import "package:coaching_class_app/pages/signup_page.dart";
 import "package:flutter/material.dart";
 import "package:google_fonts/google_fonts.dart";
 
@@ -150,7 +150,7 @@ class CustomDrawer extends StatelessWidget {
               onPressed: () {
                 Navigator.pushAndRemoveUntil(
                     context,
-                    MaterialPageRoute(builder: (context) => LoginPage()),
+                    MaterialPageRoute(builder: (context) => SignupPage()),
                     (route) => false);
               },
               child: Text(

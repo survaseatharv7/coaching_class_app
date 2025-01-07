@@ -19,6 +19,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
       PersistentTabController(initialIndex: 0);
   ScrollController _scrollController1 = ScrollController();
   ScrollController _scrollController2 = ScrollController();
+  ScrollController _scrollController3 = ScrollController();
+  ScrollController _scrollController4 = ScrollController();
 
   List<Widget> _buildScreens() {
     return [
@@ -66,7 +68,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         icon: Icon(Icons.notification_add),
         activeColorPrimary: Colors.blue,
         inactiveColorPrimary: Colors.grey,
-        scrollController: _scrollController2,
+        scrollController: _scrollController3,
         routeAndNavigatorSettings: RouteAndNavigatorSettings(
           initialRoute: "/",
           routes: {
@@ -81,7 +83,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         icon: Icon(Icons.person),
         activeColorPrimary: Colors.blue,
         inactiveColorPrimary: Colors.grey,
-        scrollController: _scrollController2,
+        scrollController: _scrollController4,
         routeAndNavigatorSettings: RouteAndNavigatorSettings(
           initialRoute: "/",
           routes: {
@@ -128,5 +130,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
       navBarStyle:
           NavBarStyle.style3, // Choose the nav bar style with this property
     );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
   }
 }
