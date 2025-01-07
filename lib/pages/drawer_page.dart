@@ -1,4 +1,5 @@
 import "package:coaching_class_app/main.dart";
+import "package:coaching_class_app/pages/login_page.dart";
 import "package:flutter/material.dart";
 import "package:google_fonts/google_fonts.dart";
 
@@ -7,6 +8,7 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       backgroundColor: Colors.white,
+      width: MainApp.widthCal(295),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -14,73 +16,66 @@ class CustomDrawer extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.only(top: MainApp.heightCal(70)),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    SizedBox(
-                      width: MainApp.widthCal(20),
-                    ),
-                    IconButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        icon: Icon(
+                padding: EdgeInsets.only(
+                    left: MainApp.widthCal(13), top: MainApp.heightCal(58)),
+                child: Container(
+                  width: MainApp.widthCal(62),
+                  height: MainApp.heightCal(30),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(
                           Icons.arrow_back_ios,
                           color: Colors.black,
                           size: MainApp.heightCal(30),
-                        )),
-                    //   TextButton(
-                    //       onPressed: () {
-                    //         Navigator.pop(context);
-                    //       },
-                    //       child: Text(
-                    //         "Back",
-                    //         style: GoogleFonts.roboto(
-                    //             fontWeight: FontWeight.w600,
-                    //             fontSize: MainApp.widthCal(14),
-                    //             color: Colors.black),
-                    //       ))
-                  ],
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    left: MainApp.widthCal(101), top: MainApp.heightCal(27)),
-                child: CircleAvatar(
-                  radius: 40,
-                  backgroundImage: AssetImage(
-                    'assets/Images/Avatar.png',
-                  ), // Replace with your image asset path
-                ),
-              ),
-              SizedBox(height: MainApp.heightCal(19)),
-              Padding(
-                padding: EdgeInsets.only(
-                  left: MainApp.widthCal(23),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(height: 4),
-                    Padding(
-                      padding: EdgeInsets.only(left: MainApp.widthCal(30)),
-                      child: Text(
-                        'atharvs7123@gmail.com',
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.grey,
                         ),
-                      ),
+                        Text(
+                          "Back",
+                          style: GoogleFonts.roboto(
+                              fontWeight: FontWeight.w600,
+                              fontSize: MainApp.widthCal(14),
+                              color: Colors.black),
+                        )
+                      ],
                     ),
-                  ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                    left: MainApp.widthCal(96.77), top: MainApp.heightCal(37)),
+                child: Container(
+                    width: MainApp.widthCal(67.07),
+                    height: MainApp.heightCal(90),
+                    child: Image.asset(
+                      "assets/Images/Avatar.png",
+                      fit: BoxFit.cover,
+                      filterQuality: FilterQuality.high,
+                    )),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  left: MainApp.widthCal(57),
+                  top: MainApp.heightCal(12),
+                ),
+                child: Text(
+                  'Aditya Sharma',
+                  style: GoogleFonts.poppins(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w700,
+                    color: Color.fromRGBO(15, 12, 128, 1),
+                  ),
                 ),
               ),
             ],
           ),
           Padding(
             padding: EdgeInsets.only(
-                left: MainApp.widthCal(23), top: MainApp.heightCal(25)),
+                left: MainApp.widthCal(28), top: MainApp.heightCal(35)),
             child: const Text(
               'Explore',
               style: TextStyle(
@@ -90,50 +85,82 @@ class CustomDrawer extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 16),
           Padding(
-            padding: EdgeInsets.only(left: MainApp.widthCal(23)),
-            child: ListTile(
-              leading: const Icon(Icons.qr_code_scanner),
-              title: const Text('QR Scan'),
-              onTap: () {},
+            padding: EdgeInsets.only(
+                left: MainApp.widthCal(15), top: MainApp.heightCal(32.79)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Attendance",
+                      style: GoogleFonts.istokWeb(
+                        color: Color.fromRGBO(153, 153, 153, 1),
+                        fontWeight: FontWeight.w400,
+                        fontSize: MainApp.widthCal(18),
+                      ),
+                    )),
+                SizedBox(
+                  height: MainApp.heightCal(32.79),
+                ),
+                TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Notes",
+                      style: GoogleFonts.istokWeb(
+                        color: Color.fromRGBO(153, 153, 153, 1),
+                        fontWeight: FontWeight.w400,
+                        fontSize: MainApp.widthCal(18),
+                      ),
+                    )),
+                SizedBox(
+                  height: MainApp.heightCal(32.79),
+                ),
+                TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Practice Quiz",
+                      style: GoogleFonts.istokWeb(
+                        color: Color.fromRGBO(153, 153, 153, 1),
+                        fontWeight: FontWeight.w400,
+                        fontSize: MainApp.widthCal(18),
+                      ),
+                    )),
+                SizedBox(
+                  height: MainApp.heightCal(32.79),
+                ),
+                TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Change Password",
+                      style: GoogleFonts.istokWeb(
+                        color: Color.fromRGBO(153, 153, 153, 1),
+                        fontWeight: FontWeight.w400,
+                        fontSize: MainApp.widthCal(18),
+                      ),
+                    )),
+              ],
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(left: MainApp.widthCal(23)),
-            child: ListTile(
-              leading: const Icon(Icons.recycling),
-              title: const Text('Return packages material'),
-              onTap: () {},
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: MainApp.widthCal(23)),
-            child: ListTile(
-              leading: const Icon(Icons.view_in_ar),
-              title: const Text('Virtual Try on'),
-              onTap: () {},
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: MainApp.widthCal(23)),
-            child: ListTile(
-              leading: const Icon(Icons.lock),
-              title: const Text('Change password'),
-              onTap: () {
-                // Handle navigation
+            padding: EdgeInsets.only(
+                left: MainApp.widthCal(15), top: MainApp.heightCal(55.61)),
+            child: TextButton(
+              onPressed: () {
+                Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginPage()),
+                    (route) => false);
               },
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: MainApp.widthCal(23)),
-            child: ListTile(
-              leading: const Icon(Icons.logout, color: Colors.red),
-              title: const Text(
+              child: Text(
                 'Log Out',
-                style: TextStyle(color: Colors.red),
+                style: GoogleFonts.istokWeb(
+                  color: Color.fromRGBO(15, 12, 128, 1),
+                  fontWeight: FontWeight.w400,
+                  fontSize: MainApp.widthCal(18),
+                ),
               ),
-              onTap: () {},
             ),
           ),
         ],
