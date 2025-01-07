@@ -167,6 +167,7 @@ class _LandingPageState extends State<LandingPage> {
                               ),
                           child: Text(
                             "Scan QR Code",
+                            textAlign: TextAlign.center,
                             style: GoogleFonts.archivo(
                               color: const Color.fromRGBO(15, 12, 128, 1),
                               fontWeight: FontWeight.w400,
@@ -237,11 +238,6 @@ class _LandingPageState extends State<LandingPage> {
             ),
           ),
           markAttendanceCard(),
-          SliverList.builder(
-              itemCount: 40,
-              itemBuilder: (context, index) {
-                return Text("Hi");
-              }),
         ],
       ),
     );

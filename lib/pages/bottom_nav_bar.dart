@@ -1,5 +1,7 @@
 import 'package:coaching_class_app/pages/drawer_page.dart';
 import 'package:coaching_class_app/pages/landing_page.dart';
+import 'package:coaching_class_app/pages/profile_page.dart';
+import 'package:coaching_class_app/pages/vhn_page.dart';
 
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
@@ -20,7 +22,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
   List<Widget> _buildScreens() {
     return [
       LandingPage(),
-      CustomDrawer(),
+      MyApp(),
+      ProfilePage(),
     ];
   }
 
@@ -36,12 +39,13 @@ class _BottomNavBarState extends State<BottomNavBar> {
           initialRoute: "/",
           routes: {
             "/first": (final context) => const LandingPage(),
-            "/second": (final context) => CustomDrawer(),
+            "/second": (final context) => MyApp(),
+            "/third": (final context) => const ProfilePage(),
           },
         ),
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.settings),
+        icon: Icon(Icons.home_work),
         activeColorPrimary: Colors.blue,
         inactiveColorPrimary: Colors.grey,
         scrollController: _scrollController2,
@@ -49,7 +53,22 @@ class _BottomNavBarState extends State<BottomNavBar> {
           initialRoute: "/",
           routes: {
             "/first": (final context) => const LandingPage(),
-            "/second": (final context) => CustomDrawer(),
+            "/second": (final context) => MyApp(),
+            "/third": (final context) => const ProfilePage(),
+          },
+        ),
+      ),
+      PersistentBottomNavBarItem(
+        icon: Icon(Icons.person),
+        activeColorPrimary: Colors.blue,
+        inactiveColorPrimary: Colors.grey,
+        scrollController: _scrollController2,
+        routeAndNavigatorSettings: RouteAndNavigatorSettings(
+          initialRoute: "/",
+          routes: {
+            "/first": (final context) => const LandingPage(),
+            "/second": (final context) => MyApp(),
+            "/third": (final context) => const ProfilePage(),
           },
         ),
       ),
